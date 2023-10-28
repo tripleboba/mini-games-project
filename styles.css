@@ -1,0 +1,9 @@
+/* Import other component stylesheet */
+@import "navbar.css";
+@import "footer.css";
+@import "blackjack/blackjack.css";
+
+/* Global styles for a whole website */
+body {
+  font-family: Arial, sans-serif;
+}

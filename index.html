@@ -1,10 +1,46 @@
+<!-- 
+check out this link: https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/#:~:text=What%20is%20an%20HTML%205,all%20of%20your%20HTML%20pages.
+to learn more about this file 
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>How to create a website using HTML and CSS</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team 18</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Test</h1>
+    <div class="app-root">
+      <div id="navbar"></div>
+      <main>
+        <div id="games-thumbnails"></div>
+      </main>
+      <div id="footer"></div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="scripts/shared-elements.js" defer></script>
+
+    <script src="scripts/games-thumbnails.js" defer></script>
   </body>
 </html>
+
+<!-- NOTE:
+to add navbar and footer in all pages
+copy these into your html
+
+at the top of the <body>
+ <div id="navbar"></div>
+
+after all your page content
+ <div id="footer"></div>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="scripts/shared-elements.js" defer></script>
+
+ Roman:
+ style the navbar and the footer in navbar.css and footer.css
+-->
