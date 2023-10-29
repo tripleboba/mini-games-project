@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guesser Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  <div class="page-container">
+    <header>
+      <div class="logo">Mini Games Portal</div>
+       <div>
+        <ul class="list">
+          <li> <a href="#" class="link"> Home</a></li>
+          <li class="dropdown">
+            <a class="link" href="index.html">Games</a>
+            <div class="dropdown-content">
+              <a href="guess-game.html">Number Guesser</a>
+              <a href="game2.html">Tic Tac Toe</a>
+              <a href="game3.html">Rock Paper Scissors</a>
+              <a href="game3.html">Blackjack</a>
+            </div>
+          </li>
+          <li><a class="link" href="contact.html">Contact</a></li>
+          <li><a class="link" href="contact.html">Login</a></li>
+          <li><a class="link" href="contact.html">Leaderboard</a></li>
+        </ul>
+       </div>
+      </div>
+    </header>
+    <section class="game-description">
+      <p>
+        Welcome to the Number Guesser Game! Try to guess the correct number
+        within the given range. You have 10 attempts. Good luck! 😊
+      </p>
+    </section>
+    <section>
+      <div class="container">
+        <div class="left-div">
+          <h2>Number Guesser</h2>
+          <p>Guess a number between 1 and 100:</p>
+          <p id="timer">⏳ 30 seconds</p>
+          <input type="number" id="guess" min="1" max="100" required />
+          <button id="submit">Submit Guess</button>
+          <p id="message"></p>
+        </div>
+        <div class="right-div">
+          <img class="animated-gif" src="giphy.gif" />
+        </div>
+      </div>
+    </section>
+    <section class="score-display">
+      <h2>Score</h2>
+      <p>🥳Wins: <span id="wins">0</span></p>
+      <p>🥺Losses: <span id="losses">0</span></p>
+    </section>
+    <a href="#" class="back-arrow">&larr; Back to Main Page</a>
+    <footer>
+      <p>Team 18: *name *name *name *name here</p>
+  </footer>  
+    <script src="script.js"></script>
+  </body>
+</html>
