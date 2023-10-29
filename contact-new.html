@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles-contact.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
+        <div class="logo">Mini Games Portal</div>
+         <div>
+          <ul class="list">
+            <li> <a href="#" class="link"> Home</a></li>
+            <li class="dropdown">
+              <a class="link" href="index.html">Games</a>
+              <div class="dropdown-content">
+                <a href="guess-game.html">Number Guesser</a>
+                <a href="game2.html">Tic Tac Toe</a>
+                <a href="game3.html">Rock Paper Scissors</a>
+                <a href="game3.html">Blackjack</a>
+              </div>
+            </li>
+            <li><a class="link" href="contact.html">Contact</a></li>
+            <li><a class="link" href="contact.html">Login</a></li>
+            <li><a class="link" href="contact.html">Leaderboard</a></li>
+          </ul>
+         </div>
+        </div>
+      </header>
+    <main>
+      <div id="about-section">
+        <h2>About Us</h2>
+        <p>
+          Welcome to our website! We are a gaming community dedicated to
+          providing a fun and interactive experience for gamers of all ages.
+          Whether you're here to request a new game or report a bug, we're here
+          to listen and improve your gaming experience.
+        </p>
+      </div>
+      <div id="contact-form">
+        <h2>Contact Us</h2>
+        <form id="form">
+          <label for="contactType">Select the reason for your contact:</label>
+          <select id="contactType" name="contactType">
+            <option value="newGameRequest">New Game Request</option>
+            <option value="reportBug">Report a Bug</option>
+          </select>
+          <label for="name">Your Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            pattern="[A-Za-z ]+"
+            required
+          />
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+        <div id="thank-you" style="display: none">
+          <p>
+            Thank you, <span id="user-name"></span>! Your request has been
+            received.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Team 18: *name *name *name *name here</p>
+  </footer> 
+    <script src="script-contact.js"></script>
+  </body>
+</html>
