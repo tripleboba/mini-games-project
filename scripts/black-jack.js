@@ -5,7 +5,7 @@ var userCards = [];
 function startGame() {
   isStarted = true;
   hideElement("startButton");
-  showElement("gameStartedContainer");
+  showElement("gameStartedContainer", "game-container");
   drawCard();
 
   uiDisplayHelper();
@@ -48,27 +48,43 @@ function displayNumberOfCards(elementId) {
     elementId === "dealerCards" ? dealerCards.length : userCards.length;
 }
 
+function endGame() {
+  showElement("result", "result-section");
+}
+
+function replayGame() {
+  hideElement("result");
+}
+
 function hideElement(elementId) {
   var element = document.getElementById(elementId);
   if (element) {
-    element.style.display = "none";
+    element.classList.add("hidden");
   }
 }
 
-function showElement(elementId) {
+function showElement(elementId, cssClass = "") {
   var element = document.getElementById(elementId);
   if (element) {
     element.classList.remove("hidden");
-    element.classList.add("game-container");
+    element.classList.add(cssClass);
   }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // user click start the game -> hide start button and show game div
+  // user clicks start the game -> hide start button and show game div
   var startButton = document.getElementById("startButton");
   startButton.addEventListener("click", startGame);
 
-  // when user click draw a card, both dealer and user will get a new card added to their hands
+  // when user clicks draw a card, both dealer and user will get a new card added to their hands
   var drawCardButton = document.getElementById("drawCardButton");
   drawCardButton.addEventListener("click", drawCard);
+
+  // user clicks end game, show result section
+  var endButton = document.getElementById("endButton");
+  endButton.addEventListener("click", endGame);
+
+  // use clicks compete again, hide result section
+  var replayButton = document.getElementById("replayButton");
+  replayButton.addEventListener("click", replayGame);
 });
