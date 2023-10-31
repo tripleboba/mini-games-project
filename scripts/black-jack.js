@@ -7,8 +7,6 @@ function startGame() {
   hideElement("startButton");
   showElement("gameStartedContainer", "game-container");
   drawCard();
-
-  uiDisplayHelper();
 }
 
 function shuffleDeck() {
@@ -50,10 +48,22 @@ function displayNumberOfCards(elementId) {
 
 function endGame() {
   showElement("result", "result-section");
+  disableButton("drawCardButton");
+  disableButton("endButton");
 }
 
 function replayGame() {
   hideElement("result");
+  reset();
+  drawCard();
+}
+
+function reset() {
+  dealerCards = [];
+  userCards = [];
+  uiDisplayHelper();
+  enableButton("drawCardButton");
+  enableButton("endButton");
 }
 
 function hideElement(elementId) {
@@ -68,6 +78,20 @@ function showElement(elementId, cssClass = "") {
   if (element) {
     element.classList.remove("hidden");
     element.classList.add(cssClass);
+  }
+}
+
+function disableButton(buttonId) {
+  var button = document.getElementById(buttonId);
+  if (button) {
+    button.disabled = true;
+  }
+}
+
+function enableButton(buttonId) {
+  var button = document.getElementById(buttonId);
+  if (button) {
+    button.disabled = false;
   }
 }
 
