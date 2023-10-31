@@ -6,6 +6,10 @@ body {
 }
 
 header {
+  position: fixed;
+}
+
+header ul {
   background: #36123f;
   display: flex;
   align-items: center;
@@ -219,3 +223,10 @@ footer {
   font-size: 15px;
   border-radius: 20px;
 }
+
+ @media (max-width: 768px) {
+  header {
+  width: 100%;
+ height: auto;
+  }
+    }
