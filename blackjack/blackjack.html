@@ -10,14 +10,45 @@
   <body>
     <div id="navbar"></div>
 
+    <!-- 
+      game description
+      score board
+      back button
+     -->
     <div class="blackjack-container">
-      <h1 class="page-title">Black Jack Game</h1>
+      <div class="page-header">
+        <h1 class="page-title">Simple Black Jack</h1>
+        <div class="description">
+          <h3>How To Play This Game</h3>
+          <p>Description here</p>
+        </div>
+      </div>
+
       <button id="startButton">Start Game</button>
+
       <div id="gameStartedContainer" class="hidden">
-        <p>Dealer's Hand: <span id="dealerCards"></span></p>
-        <button id="drawCardButton">Draw A Card</button>
-        <p>Your Hand: <span id="userCards"></span></p>
-        <button>End Early! Show total!</button>
+        <div class="game-wrapper">
+          <div class="game-container">
+            <div class="game-section">
+              <p>Dealer's Hand: <span id="dealerCards"></span></p>
+              <p>Your Hand: <span id="userCards"></span></p>
+              <button id="drawCardButton">Draw A Card</button>
+            </div>
+            <div class="info-section">
+              <div class="score-section">
+                <h4>Score Board</h4>
+              </div>
+              <div class="action-section">
+                <button id="endButton">End Early! Show total!</button>
+                <button id="replayButton">Compete Again!</button>
+              </div>
+            </div>
+          </div>
+          <div class="result-section hidden">
+            <h4>Result</h4>
+            <p>Win, Tie, Bust</p>
+          </div>
+        </div>
       </div>
     </div>
 

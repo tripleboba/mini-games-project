@@ -59,6 +59,7 @@ function showElement(elementId) {
   var element = document.getElementById(elementId);
   if (element) {
     element.classList.remove("hidden");
+    element.classList.add("game-container");
   }
 }
 

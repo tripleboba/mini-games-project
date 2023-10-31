@@ -1,6 +1,38 @@
 .blackjack-container {
 }
 
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .game-section {
+      #drawCardButton {
+        color: green;
+      }
+    }
+
+    .info-section {
+      .score-section {
+      }
+      
+      .action-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+
+  .result-section {
+  }
+}
+
 .hidden {
   display: none;
 }
