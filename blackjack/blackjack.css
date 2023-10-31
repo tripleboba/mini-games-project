@@ -1,4 +1,6 @@
 .blackjack-container {
-  border: 2px solid red;
-  background-color: green;
+}
+
+.hidden {
+  display: none;
 }

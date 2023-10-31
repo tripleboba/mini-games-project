@@ -12,13 +12,20 @@
 
     <div class="blackjack-container">
       <h1 class="page-title">Black Jack Game</h1>
-      <div>......</div>
+      <button id="startButton">Start Game</button>
+      <div id="gameStartedContainer" class="hidden">
+        <p>Dealer's Hand: <span id="dealerCards"></span></p>
+        <button id="drawCardButton">Draw A Card</button>
+        <p>Your Hand: <span id="userCards"></span></p>
+        <button>End Early! Show total!</button>
+      </div>
     </div>
 
     <div id="footer"></div>
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="../scripts/shared-elements.js" defer></script>
+    <script src=".../scripts/shared-elements.js" defer></script>
+    <script src="../scripts/black-jack.js" defer></script>
   </body>
 </html>
