@@ -67,6 +67,8 @@ function setCardValue(generatedNumber) {
 /** Helper in display necessary info to the UI */
 function uiDisplayHelper() {
   displayNumberOfCards();
+  displayTotalValue("dealerTotalValue");
+  displayTotalValue("userTotalValue");
 }
 
 function displayNumberOfCards() {
@@ -81,6 +83,12 @@ function displayNumberOfCards() {
     }
   }
   setText();
+}
+
+function displayTotalValue(elementId) {
+  document.getElementById(elementId).textContent = elementId.includes("dealer")
+    ? getTotalCardsValue(dealerCards)
+    : getTotalCardsValue(userCards);
 }
 
 function endGame() {
