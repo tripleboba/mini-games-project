@@ -80,6 +80,7 @@ function endGame() {
   showElement("result", "result-section");
   disableButton("drawCardButton");
   disableButton("endButton");
+  enableButton("replayButton");
 }
 
 function replayGame() {
@@ -94,6 +95,7 @@ function reset() {
   uiDisplayHelper();
   enableButton("drawCardButton");
   enableButton("endButton");
+  disableButton("replayButton");
 }
 
 function hideElement(elementId) {
