@@ -27,9 +27,8 @@ function addCard() {
   dealerCards.push(shuffleDeck());
   userCards.push(shuffleDeck());
 
-  let test1 = getTotalCardsValue(dealerCards);
-  let test2 = getTotalCardsValue(userCards);
-  console.log("Total:", test1, test2);
+  getTotalCardsValue(dealerCards);
+  getTotalCardsValue(userCards);
 }
 
 function translateDeck(cardList) {
@@ -67,13 +66,21 @@ function setCardValue(generatedNumber) {
 
 /** Helper in display necessary info to the UI */
 function uiDisplayHelper() {
-  displayNumberOfCards("dealerCards");
-  displayNumberOfCards("userCards");
+  displayNumberOfCards();
 }
 
-function displayNumberOfCards(elementId) {
-  document.getElementById(elementId).textContent =
-    elementId === "dealerCards" ? dealerCards.length : userCards.length;
+function displayNumberOfCards() {
+  // total number of drawn cards gonna be always the same for both dealer and user
+  var totalCards = document.getElementsByClassName("totalCards");
+  function setText() {
+    for (var i = 0; i < totalCards.length; i++) {
+      totalCards[i].textContent =
+        dealerCards.length !== 1
+          ? dealerCards.length + " cards"
+          : dealerCards.length + " card";
+    }
+  }
+  setText();
 }
 
 function endGame() {
