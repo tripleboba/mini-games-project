@@ -92,7 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (userGuess === targetNumber) {
         clearInterval(timer); // Stop the timer
         timer = null;
-        showMessageWithFade(`Congratulations! You guessed the correct number (${targetNumber}) in ${attempts} attempts.`);
+        showMessageWithFade(
+          `Congratulations! You guessed the correct number (${targetNumber}) in ${attempts} attempts.`
+        );
         wins++;
         winsDisplay.textContent = wins;
         gameIsOver = true; // Game is over
@@ -101,20 +103,20 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (attempts >= 10) {
         clearInterval(timer); // Stop the timer
         timer = null;
-        showMessageWithFade(`Sorry, you've reached the maximum number of attempts. The correct number was ${targetNumber}.`);
+        showMessageWithFade(
+          `Sorry, you've reached the maximum number of attempts. The correct number was ${targetNumber}.`
+        );
         losses++;
         lossesDisplay.textContent = losses;
         gameIsOver = true; // Game is over
         guessInput.readOnly = false;
         reloadPage();
       } else {
-        const hint = userGuess < targetNumber ? 'higher' : 'lower';
+        const hint = userGuess < targetNumber ? "higher" : "lower";
         showMessageWithFade(`Try again. The correct number is ${hint}.`);
       }
     }
   }
-
-
 
   // Function to reload the page
   function reloadPage() {
@@ -122,8 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
       location.reload();
     }, 6000); // Reload the page after a delay
   }
-
-
 
   // Function to show messages with a fade effect
   function showMessageWithFade(messageText) {
@@ -142,22 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Function to generate a random number between min and max (inclusive)
-  function generateRandomNumber(min,max) {
-    return Math.floor(Math.random()*(max-min+1))+min;
+  function generateRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-
-
-
-
-
-
-
-
-
-
-// Rest of the code...
-
+  // Rest of the code...
 
   // Function to reset the game
   function resetGame() {
@@ -168,15 +157,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Get references to the input field and the submit button
-const inputField = document.getElementById('guess');
-const submitButton = document.getElementById('submit');
+const inputField = document.getElementById("guess");
+const submitButton = document.getElementById("submit");
 
 // Add an event listener to the input field to listen for "Enter" key press
-inputField.addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-        // If "Enter" key is pressed, trigger a click event on the submit button
-        submitButton.click();
-    }
+inputField.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    // If "Enter" key is pressed, trigger a click event on the submit button
+    submitButton.click();
+  }
 });
 
 // Reset guess input box after a number entered
@@ -196,39 +185,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Dropdown menu
-  const dropdowns = document.querySelectorAll(".dropdown");
+const dropdowns = document.querySelectorAll(".dropdown");
 
-  dropdowns.forEach(dropdown => {
-      const button = dropdown.querySelector(".link");
-      const content = dropdown.querySelector(".dropdown-content");
-      let timeout;
-  
-      // Show the dropdown when the mouse enters the "Games" tab
-      button.addEventListener("mouseenter", () => {
-          clearTimeout(timeout);
-          content.style.display = "block";
-      });
-  
-      // Hide the dropdown when the mouse leaves the dropdown tab
-      dropdown.addEventListener("mouseleave", () => {
-          timeout = setTimeout(() => {
-              content.style.display = "none";
-          }, 500); // Adjust the delay time as needed
-      });
-  
-      // Cancel the timeout and keep the menu open when the mouse enters the dropdown
-      dropdown.addEventListener("mouseenter", () => {
-          clearTimeout(timeout);
-      });
-  
-      // Click to toggle the dropdown
-      button.addEventListener("click", (e) => {
-          e.preventDefault(); // Prevent the link from navigating
-          content.style.display = (content.style.display === "block") ? "none" : "block";
-      });
-  
-      content.addEventListener("click", (event) => {
-          event.stopPropagation(); // Prevent the dropdown from closing when clicking on an item
-      });
+dropdowns.forEach((dropdown) => {
+  const button = dropdown.querySelector(".link");
+  const content = dropdown.querySelector(".dropdown-content");
+  let timeout;
+
+  // Show the dropdown when the mouse enters the "Games" tab
+  button.addEventListener("mouseenter", () => {
+    clearTimeout(timeout);
+    content.style.display = "block";
   });
 
+  // Hide the dropdown when the mouse leaves the dropdown tab
+  dropdown.addEventListener("mouseleave", () => {
+    timeout = setTimeout(() => {
+      content.style.display = "none";
+    }, 500); // Adjust the delay time as needed
+  });
+
+  // Cancel the timeout and keep the menu open when the mouse enters the dropdown
+  dropdown.addEventListener("mouseenter", () => {
+    clearTimeout(timeout);
+  });
+
+  // Click to toggle the dropdown
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent the link from navigating
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
+  });
+
+  content.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent the dropdown from closing when clicking on an item
+  });
+});
