@@ -12,7 +12,7 @@ function startGame() {
 function shuffleDeck() {
   // generate random number with
   // number cards: from 2 -> 10
-  // face cards: queen: 11, king: 12, ace: 13, jack: 14
+  // face cards: jack: 11, queen: 12, king: 13, ace: 14
   return Math.floor(Math.random() * (14 - 2 + 1)) + 2;
 }
 
@@ -33,16 +33,16 @@ function addCard() {
 
 function translateDeck(cardList) {
   // translate numbers assigned for face cards to the ui logic
-  // face cards: queen: 11, king: 12, ace: 13, jack: 14
+  // face cards: jack: 11, queen: 12, king: 13, ace: 14
 }
 
 /**
- * if jack (generated random number assigned to 14) is drawn, decide to set:
- * - J value as 1 if: the rest + 11 J gonna be busted
- * - J value as 11 if: the rest + 11 J gonna win
- * - show both total for J = 1 / J = 11 if the rest + J neither bust nor win
+ * if ace (generated random number assigned to 14) is drawn, decide to set:
+ * - A value as 1 if: the rest + 11 A gonna be busted
+ * - A value as 11 if: the rest + 11 A gonna win
+ * - show both total for A = 1 / A = 11 if the rest + A neither bust nor win
  */
-function hasJack() {}
+function hasAce() {}
 
 function getTotalCardsValue(cardList) {
   return cardList.reduce(
@@ -53,13 +53,13 @@ function getTotalCardsValue(cardList) {
 
 function setCardValue(generatedNumber) {
   // number cards: from 2 -> 10
-  // face cards: queen: 11, king: 12, ace: 13, jack: 14
+  // face cards: jack: 11, queen: 12, king: 13, ace: 14
   if (generatedNumber <= 10) {
     return generatedNumber;
   } else if (generatedNumber <= 13) {
     return 10;
   } else {
-    // handle hasJack in list return 2 values
+    // handle hasAce in list return 2 values
     return 0;
   }
 }
