@@ -17,10 +17,19 @@ body {
   flex-direction: column;
   gap: 30px;
 
-  .game-container {
+  .container {
+    padding: 10px;
+    border-radius: 1em;
+  }
+
+  .game {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    flex-wrap: wrap;
+
+    background-color: #d5d9f254;
+    color: #5b6ace;
 
     .game-section {
       display: flex;
@@ -40,15 +49,10 @@ body {
     gap: 10px;
   }
 
-  .result-section {
+  .result {
+    background-color: #fce2704a;
+    color: #8d7200;
   }
-}
-
-#drawCardButton {
-}
-
-.hidden {
-  display: none;
 }
 
 /* buttons */
@@ -56,16 +60,19 @@ body {
   padding: 1em;
   border-radius: 0.5em;
   border-style: solid;
-  border-color: #fd6a88;
   background-color: #fff;
-  color: #fd6a88;
+  border: 1.5px solid;
   cursor: pointer;
-  border-width: 1px;
   white-space: wrap;
 }
+.button:disabled {
+  opacity: 0.5;
+  cursor: unset;
+}
 
-/* start game button */
 #startButton {
+  border-color: #fd6a88;
+  color: #fd6a88;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -73,7 +80,39 @@ body {
   gap: 4px;
   width: 100%;
 }
-#startButton:hover {
+#startButton:hover:enabled {
+  border-color: #ffdc7d;
+  background-color: #fce270;
+  color: #7e6318;
+}
+
+#drawCardButton {
+  min-width: 163px;
+  border-color: #5ea526;
+  color: #5ea526;
+  background-color: #e6f7ef;
+}
+#drawCardButton:hover:enabled {
+  color: #fff;
+  background-color: #5ea526;
+}
+
+#endButton {
+  background-color: #fde0e6;
+  color: #cc0f35;
+  border-color: #cc0f358c;
+}
+#endButton:hover:enabled {
+  background-color: #f14668;
+  color: #fff;
+}
+
+#replayButton {
+  background-color: #fff3d1;
+  color: #7e6318;
+  border-color: #fce270;
+}
+#replayButton:hover:enabled {
   border-color: #ffdc7d;
   background-color: #fce270;
   color: #7e6318;
@@ -81,4 +120,8 @@ body {
 
 .icon {
   width: 1.5em;
+}
+
+.hidden {
+  display: none !important;
 }
