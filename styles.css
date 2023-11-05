@@ -6,9 +6,8 @@
 @import "blackjack/blackjack.css";
 
 /* Global styles for a whole website */
-/* body { */
-/* font-family: Arial, sans-serif; */
-/* } */
+body {
+}
 
 header {
   width: 100%;

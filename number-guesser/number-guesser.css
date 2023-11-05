@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   background-color: #f5f3e7;
+  width: 100%;
 }
 
 .number-guesser .description,
@@ -21,7 +22,6 @@
   color: rgb(56, 12, 87);
   border: 2px solid #c9ade5;
   text-align: center;
-  width: 700px;
   box-sizing: border-box;
   margin-top: 20px;
 }
