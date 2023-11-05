@@ -9,5 +9,5 @@ $(function () {
 
 // function to load nav bar to reuse
 $(function () {
-  $("#footer").load("footer.html");
+  $("#footer").load(path.footerPath);
 });

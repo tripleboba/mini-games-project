@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact Us</title>
-    <link rel="stylesheet" href="../contact/contact.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
 
   <body>
-    <div id="navbar"></div>
+    <header>
+      <div id="topNavbar"></div>
+    </header>
 
     <div class="contact-container">
       <h1 class="page-title">Contact Us</h1>
@@ -19,14 +21,16 @@
             <p>
               Welcome to our website! We are a gaming community dedicated to
               providing a fun and interactive experience for gamers of all ages.
-              Whether you're here to request a new game or report a bug, we're here
-              to listen and improve your gaming experience.
+              Whether you're here to request a new game or report a bug, we're
+              here to listen and improve your gaming experience.
             </p>
           </div>
           <div id="contact-form">
             <h2>Contact Us</h2>
             <form id="form">
-              <label for="contactType">Select the reason for your contact:</label>
+              <label for="contactType"
+                >Select the reason for your contact:</label
+              >
               <select id="contactType" name="contactType">
                 <option value="newGameRequest">New Game Request</option>
                 <option value="reportBug">Report a Bug</option>
@@ -42,7 +46,12 @@
               <label for="email">Your Email:</label>
               <input type="email" id="email" name="email" required />
               <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
               <input type="submit" value="Submit" />
             </form>
             <div id="thank-you" style="display: none">
@@ -56,11 +65,14 @@
       </div>
     </div>
 
-    <div id="footer"></div>
+    <footer>
+      <div id="footer"></div>
+    </footer>
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="scripts/shared-elements.js" defer></script>
+    <script type="module" src="../scripts/shared-elements.js" defer></script>
+
     <script src="../scripts/contact.js"></script>
   </body>
 </html>

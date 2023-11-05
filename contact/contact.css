@@ -40,7 +40,7 @@ header ul {
   color: #bf72c1;
   margin: 50px;
 }
- 
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -90,7 +90,7 @@ header ul {
 
 .link::before,
 .link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 100%;
@@ -140,8 +140,8 @@ form label {
   margin-top: 10px;
 }
 
-form select{
-    cursor: pointer;
+form select {
+  cursor: pointer;
 }
 
 form select,
@@ -188,18 +188,9 @@ form input[type="submit"]:hover {
   font-size: 23px;
 }
 
-footer {
-  background-color: #442e4a;
-  color: #fff;
-  text-align: center;
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 20px;
-}
-
 @media (max-width: 768px) {
   header {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
   }
 }
