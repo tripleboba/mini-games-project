@@ -1,4 +1,4 @@
-const statusDisplay = document.querySelector(".game--status");
+const statusDisplay = document.querySelector(".status");
 
 let gameActive = true;
 let currentPlayer = "X";
@@ -84,6 +84,4 @@ function handleRestartGame() {
 document
   .querySelectorAll(".cell")
   .forEach((cell) => cell.addEventListener("click", handleCellClick));
-document
-  .querySelector(".game--restart")
-  .addEventListener("click", handleRestartGame);
+document.querySelector(".restart").addEventListener("click", handleRestartGame);
