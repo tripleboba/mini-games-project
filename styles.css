@@ -1,9 +1,14 @@
 /* Import other component stylesheet */
-@import "navbar.css";
-@import "footer.css";
+@import "number-guesser/number-guesser.css";
+@import "top-navbar/top-navbar.css";
+/* @import "footer.css"; */
+@import "tic-tac-toe/tictactoe.css";
 @import "blackjack/blackjack.css";
 
 /* Global styles for a whole website */
 body {
-  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
 }

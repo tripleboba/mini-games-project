@@ -1,159 +1,59 @@
-body {
+.number-guesser {
   font-family: comic;
   margin: 0;
   padding: 0;
   background-color: #f5f3e7;
-}
-
-header {
-  position: fixed;
-}
-
-header ul {
-  background: #36123f;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
-  box-shadow: 0 5px 10px rgb(35, 2, 48);
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 90px;
-  padding: 0;
-  border-radius: 20px;
 }
 
-.list {
-  color: #fff;
-  text-align: center;
-  list-style: none;
-  gap: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  font-size: 30px;
-  font-style: oblique;
-  color: #bf72c1;
-}
- 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown .link {
-  text-decoration: none;
-  color: white;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: #41316b;
-  border-radius: 20px;
-}
-
-.dropdown-content a:hover {
-  background-color: #c9ade5;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-
-.list li {
-  margin-right: 20px;
-}
-
-.link {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-}
-
-.link::before,
-.link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #00fffc;
-  transform: scaleX(0);
-  transition: transform 0.25s;
-}
-
-.link::before {
-  top: -3px;
-  transform-origin: left;
-}
-
-.link::after {
-  bottom: -3px;
-  transform-origin: right;
-}
-
-.link:hover::before,
-.link:hover::after,
-.active::before,
-.active::after {
-  transform: scaleX(1);
-}
-
-.game-description,
-.game-display,
-.score-display {
+.number-guesser .description,
+.number-guesser .score-display {
   margin: 90px;
   padding: 20px;
   border: 1px solid #c9ade5;
   border-radius: 20px;
 }
 
-.back-arrow {
-  display: block;
-  text-align: center;
-  margin: 20px;
-  text-decoration: none;
-  color: #420a44;
-}
-
-.back-arrow:hover {
-  text-decoration: underline;
-}
-
-.game-description {
+.number-guesser .description {
   color: rgb(64, 12, 87);
-  font-family: comic;
 }
 
-.game-display {
+.number-guesser .score-display {
   color: rgb(56, 12, 87);
+  border: 2px solid #c9ade5;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20px;
 }
 
-input,
-select,
-textarea {
+.number-guesser .container {
+  display: inline-flex;
+}
+
+.number-guesser .left-div {
+  flex: 2;
+  color: #41316b;
+  font-size: large;
+  margin: 0 auto 0 120px;
+  padding: 20px;
+  border: 1px solid #c9ade5;
+  border-radius: 20px;
+  width: 500px;
+}
+
+.number-guesser .right-div {
+  flex: 1;
+  margin: 0 auto 0 120px;
+  padding: 20px;
+}
+
+.number-guesser input,
+.number-guesser select,
+.number-guesser textarea {
   color: rgb(64, 15, 86);
 }
 
-#submit {
+.number-guesser #submit {
   background: #41316b;
   color: rgb(204, 171, 189);
   border: 1px solid #eee;
@@ -164,69 +64,25 @@ textarea {
   height: 50px;
 }
 
-#guess {
-    width: 50px;
-    height: 50px;
+.number-guesser #guess {
+  width: 50px;
+  height: 50px;
 }
 
-.score-display {
-  color: rgb(56, 12, 87);
-  border: 2px solid #c9ade5;
-  text-align: center;
-  border-radius: 20px;
-  width: 700px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-div {
-  margin: 20px;
-  padding: 20px;
-  border: auto solid #c9ade5;
-  border-radius: 20px;
-}
-
-.container {
-  display: inline-flex;
-}
-
-.left-div {
-  flex: 2;
-  font-family: comic;
-  color: #41316b;
-  font-size: large;
-  margin: 0 auto 0 120px;
-  padding: 20px;
-  border: 1px solid #c9ade5;
-  border-radius: 20px;
-  width: 500px;
-}
-
-.right-div {
-  flex: 1;
-  margin: 0 auto 0 120px;
-  padding: 20px;
-}
-
-img.animated-gif {
+.number-guesser img.animated-gif {
   width: 200px;
   height: auto;
   padding: 100px;
 }
 
-footer {
-  background-color: #442e4a;
-  color: #fff;
+.number-guesser .back-arrow {
+  display: block;
   text-align: center;
-  padding: 5px;
-  font-size: 15px;
-  border-radius: 20px;
+  margin: 20px;
+  text-decoration: none;
+  color: #420a44;
 }
 
- @media (max-width: 768px) {
-  header {
-  width: 100%;
- height: auto;
-  }
-    }
+.number-guesser .back-arrow:hover {
+  text-decoration: underline;
+}
