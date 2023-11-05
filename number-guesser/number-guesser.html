@@ -4,32 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number Guesser Game</title>
-    <link rel="stylesheet" href="../number-guesser/number-guesser.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
   <div class="page-container">
-    <header>
-      
-       <div>
-        <ul class="list">
-          <div class="logo">Mini Games Portal</div>
-          <li> <a href="#" class="link"> Home</a></li>
-          <li class="dropdown">
-            <a class="link" href="../index.html">Games</a>
-            <div class="dropdown-content">
-              <a href="../number-guesser/number-guesser.html">Number Guesser</a>
-              <a href="game2.html">Tic Tac Toe</a>
-              <a href="game3.html">Rock Paper Scissors</a>
-              <a href="game3.html">Blackjack</a>
-            </div>
-          </li>
-          <li><a class="link" href="../contact/contact.html">Contact</a></li>
-          <li><a class="link" href="contact.html">Login</a></li>
-          <li><a class="link" href="contact.html">Leaderboard</a></li>
-        </ul>
-       </div>
-      </div>
-    </header>
+    <div id="topNavbar"></div>
     <section class="game-description">
       <p>
         Welcome to the Number Guesser Game! Try to guess the correct number
@@ -60,6 +39,11 @@
     <footer>
       <p>Team 18: *name *name *name *name here</p>
   </footer>  
+  <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script type="module" src="../scripts/shared-elements.js" defer></script>
+
+
     <script src="../scripts/number-guesser.js"></script>
   </body>
 </html>

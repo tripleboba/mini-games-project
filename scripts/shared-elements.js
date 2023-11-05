@@ -1,8 +1,10 @@
-/** load shared element across all pages */
+import path from "./config.js";
 
+/** load shared element across all pages */
 // function to load nav bar to reuse
 $(function () {
-  $("#navbar").load("navbar.html");
+  // $("#topNavbar").load("../top-navbar/top-navbar.html");
+  $("#topNavbar").load(path.topNavbarPath);
 });
 
 // function to load nav bar to reuse

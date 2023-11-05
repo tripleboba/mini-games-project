@@ -1,7 +1,9 @@
 /* Import other component stylesheet */
-@import "navbar.css";
-@import "footer.css";
-@import "blackjack/blackjack.css";
+@import "top-navbar/top-navbar.css";
+/* @import "footer.css"; */
+@imort "number-guesser/number-guesser.css";
+@import "tic-tac-toe/tictactoe.css";
+/* @import "blackjack/blackjack.css"; */
 
 /* Global styles for a whole website */
 body {
