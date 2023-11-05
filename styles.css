@@ -10,10 +10,12 @@
 @import "blackjack/blackjack.css";
 
 /* contact */
-/* @import "contact/contact.css"; */
+@import "contact/contact.css";
 
 /* Global styles for a whole website */
 body {
+  margin: 0;
+  padding: 0;
 }
 
 header,
