@@ -1,7 +1,8 @@
 #footer {
+  position: relative;
+  z-index: 9999;
   background-color: #0d0541;
   box-shadow: 1px -4px 10px #7f6eff;
-  margin-top: 20px;
 }
 
 .team-footer {

@@ -4,6 +4,9 @@
 @import "top-navbar/top-navbar.css";
 @import "footer/footer.css";
 
+/* home */
+@import "game-thumbnails/game-thumbnails.css";
+
 /* games */
 @import "number-guesser/number-guesser.css";
 @import "tic-tac-toe/tictactoe.css";
