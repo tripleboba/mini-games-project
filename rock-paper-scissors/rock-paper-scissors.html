@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+
+  <body class="rock-paper-scissors">
+    <header>
+      <div id="topNavbar"></div>
+    </header>
+
+    <main>
+      <div class="intro">
+        <div class="page-header">
+          <h1 class="page-title">Rock Paper Scissors Game</h1>
+          <div class="description">
+            <h3>How To Play This Game</h3>
+            <p>
+              Rock crushes scissors, scissors cut paper, and paper covers rock.
+              The rules are very simple and probably you remember them from your
+              childhood: If you choose Rock, you will win against Scissors but
+              lose against Paper. If you choose Scissors, you will win against
+              Paper but lose against Rock. If you choose Paper, you will win
+              against Rock but lose against Scissors. You have 10 rounds. The
+              game ends when rounds over. If you want to play again, just click
+              “Play Again” button after a game is finished. See who wins each
+              round!
+            </p>
+            <img src="img/rock-paper-scissors.jpg" alt="game-rules" />
+          </div>
+        </div>
+      </div>
+
+      <section class="game">
+        <!--Title -->
+        <div class="title">Rock Paper Scissors Shoot!</div>
+
+        <!--Display Score of player and computer -->
+        <div class="score">
+          <div class="playerScore">
+            <h2>You</h2>
+            <p class="p-count count">0</p>
+          </div>
+          <div class="computerScore">
+            <h2>Computer</h2>
+            <p class="c-count count">0</p>
+          </div>
+        </div>
+        <div class="move">Choose your move!</div>
+
+        <!--Number of moves left before game ends -->
+        <div class="movesleft">Moves Left: 10</div>
+
+        <!--Options available to player to play game -->
+        <div class="options">
+          <button class="rock">Rock</button>
+          <button class="paper">Paper</button>
+          <button class="scissor">Scissors</button>
+        </div>
+
+        <!--Final result of game -->
+        <div class="result"></div>
+
+        <!--Reload the game -->
+        <button class="reload"></button>
+      </section>
+    </main>
+    <footer>
+      <div id="footer"></div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="module" src="../scripts/shared-elements.js" defer></script>
+
+    <script src="../scripts/rock-paper-scissors.js"></script>
+  </body>
+</html>
