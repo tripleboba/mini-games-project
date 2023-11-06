@@ -1,0 +1,133 @@
+/* Applies to whole document */
+.rock-paper-scissors {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #4005ae;
+  color: #fff;
+}
+
+.rock-paper-scissors .page-title {
+  display: flex;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  color: turquoise;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.rock-paper-scissors .description {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 40vw;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* To center everything in game */
+.rock-paper-scissors .game {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Second title of the game */
+.rock-paper-scissors .title {
+  position: center;
+  top: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  z-index: 2;
+  color: turquoise;
+}
+
+/* Score Board */
+.rock-paper-scissors .score {
+  display: flex;
+  height: 20vh;
+  width: 50vw;
+  justify-content: space-evenly;
+  position: center;
+  top: 0;
+  z-index: 1;
+}
+
+/* Score */
+.rock-paper-scissors .p-count,
+.rock-paper-scissors .c-count {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+/* displaying three buttons in one line */
+.rock-paper-scissors .options {
+  display: flex;
+  width: 50vw;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+/* Styling on all three buttons */
+.rock-paper-scissors .rock,
+.rock-paper-scissors .paper,
+.rock-paper-scissors .scissor {
+  padding: 0.8rem;
+  width: 100px;
+  border-radius: 10px;
+  background: turquoise;
+  outline: none;
+  border-color: turquoise;
+  border: none;
+  cursor: pointer;
+}
+
+.rock-paper-scissors .move {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Reload button style */
+.rock-paper-scissors .reload {
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: turquoise;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rock-paper-scissors .result {
+  margin-top: 100px;
+  font-size: 2rem;
+  color: red;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 612px) {
+  .rock-paper-scissors .title {
+    text-align: center;
+  }
+  .rock-paper-scissors .score {
+    position: absolute;
+    top: 200px;
+    width: 100vw;
+  }
+  .rock-paper-scissors .options {
+    width: 100vw;
+  }
+}
