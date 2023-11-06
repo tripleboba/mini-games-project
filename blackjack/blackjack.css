@@ -101,6 +101,19 @@
   cursor: unset;
 }
 
+.black-jack #backButton {
+  margin: 0 0 20px 10px;
+  font-size: 16px;
+}
+.black-jack #backButton:hover {
+  transform: scale(1.2);
+  box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.4);
+}
+.black-jack #backButton a {
+  text-decoration: none;
+  color: #000;
+}
+
 .black-jack #startButton {
   border-color: #fd6a88;
   color: #fd6a88;
