@@ -122,6 +122,23 @@ function getGameResult() {
   }
 }
 
+function getGameResultEarly() {
+  let dealerTotal = getTotalCardsValue(dealerCards);
+  let userTotal = getTotalCardsValue(userCards);
+
+  if (dealerTotal > userTotal) {
+    dealerPoint++;
+    resultMsg = "You bust! Dealer wins this round!";
+  } else if (dealerTotal === userTotal) {
+    userPoint++;
+    dealerPoint++;
+    resultMsg = "Tie!";
+  } else {
+    userPoint++;
+    resultMsg = "Dealer busts! You win this round!";
+  }
+}
+
 /** Helper in display necessary info to the UI */
 function uiDisplayHelper() {
   displayNumberOfCards();
@@ -131,7 +148,6 @@ function uiDisplayHelper() {
   displayDrawnCards("userDrawnCards");
   displayPoint("dealerPoint");
   displayPoint("userPoint");
-  // displayGameResult();
 }
 
 function displayNumberOfCards() {
@@ -173,6 +189,19 @@ function displayGameResult() {
 function endGame() {
   showElement("result", "result-section");
   displayGameResult();
+
+  disableButton("drawCardButton");
+  disableButton("endButton");
+  enableButton("replayButton");
+}
+
+function endGameEarly() {
+  showElement("result", "result-section");
+  getGameResultEarly();
+  displayGameResult();
+  displayPoint("dealerPoint");
+  displayPoint("userPoint");
+
   disableButton("drawCardButton");
   disableButton("endButton");
   enableButton("replayButton");
@@ -233,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // user clicks end game, show result section
   var endButton = document.getElementById("endButton");
-  endButton.addEventListener("click", endGame);
+  endButton.addEventListener("click", endGameEarly);
 
   // use clicks compete again, hide result section
   var replayButton = document.getElementById("replayButton");
