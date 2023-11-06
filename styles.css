@@ -33,6 +33,10 @@ body main {
   flex: 1;
 }
 
+.app-root main {
+  height: 100vh;
+}
+
 header,
 footer {
   width: 100%;
