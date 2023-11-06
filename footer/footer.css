@@ -1,102 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#footer {
+  position: relative;
+  z-index: 9999;
+  background-color: #0d0541;
+  box-shadow: 1px -4px 10px #7f6eff;
 }
 
-html,
-body {
-    height: 90%;
-    margin: 0;
-    padding: 0;
-    display: grid;
+.team-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px 0 20px;
+  gap: 20px;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
-    overflow: hidden;
-
-}
-
-footer {
-    background-color: #0d0541;
-    padding: 70px 30px 20px;
-    color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    margin-top: auto;
-    text-emphasis-color: white;
-}
-
-.footerContainer {
-    padding: 70px 30px 20px;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    width: 100%;
-}
-
-
-
-
-@media (max-width: 700px) {
-    .footerNav ul {
-        flex-direction: column;
-    }
-
-    .footerNav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 10px;
-    }
-}
-
-.socialIcons a i {
-    font-size: 2em;
-    color: #111;
-    opacity: 0.9;
-}
-
-.socialIcons a:hover {
-    background-color: black;
-    transition: 0.5s;
-}
-
-.socialIcons a:hover i {
-    color: white;
-    transition: 0.5s;
-}
-
-.footerNav {
-    margin: 30px 0;
-}
-
-.footerNav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.footerNav ul li a {
-    color: white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-
-.footerNav ul li a:hover {
-    opacity: 1;
+.team-footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  padding: 0;
+  margin: 0;
 }

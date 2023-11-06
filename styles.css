@@ -1,9 +1,27 @@
 /* Import other component stylesheet */
-@import "navbar.css";
-@import "footer.css";
+
+/* shared */
+@import "top-navbar/top-navbar.css";
+@import "footer/footer.css";
+
+/* home */
+@import "game-thumbnails/game-thumbnails.css";
+
+/* games */
+@import "number-guesser/number-guesser.css";
+@import "tic-tac-toe/tictactoe.css";
 @import "blackjack/blackjack.css";
+
+/* contact */
+@import "contact/contact.css";
 
 /* Global styles for a whole website */
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  width: 100%;
 }
