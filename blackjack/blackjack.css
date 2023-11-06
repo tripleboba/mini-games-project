@@ -16,17 +16,20 @@
   margin: 0 0 1em;
 }
 
-.black-jack h3 {
-  margin-block-start: 0.5em;
-  margin-block-end: unset;
-}
+.black-jack h3,
+.black-jack h4,
 .black-jack p {
-  margin-block-start: 0.5em;
+  margin-block-start: unset;
+  margin-block-end: unset;
 }
 
 .black-jack .container {
   padding: 10px;
   border-radius: 1em;
+}
+
+.black-jack .description {
+  margin-bottom: 1em;
 }
 
 .black-jack .game-wrapper {
@@ -40,10 +43,12 @@
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
+  padding: 1em;
 
   background-color: #d5d9f254;
   color: #5b6ace;
 }
+
 .black-jack .game-section {
   display: flex;
   flex-direction: column;
@@ -52,9 +57,18 @@
 }
 
 .black-jack .info-section {
-  .score-section {
-  }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-content: space-around;
+  align-items: stretch;
 }
+
+.black-jack .score-section {
+  background-color: #fff;
+}
+
 .black-jack .action-section {
   display: flex;
   flex-direction: column;
