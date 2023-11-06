@@ -17,7 +17,6 @@
 }
 
 .black-jack h3,
-.black-jack h4,
 .black-jack p {
   margin-block-start: unset;
   margin-block-end: unset;
@@ -46,7 +45,7 @@
   padding: 1em;
 
   background-color: #d5d9f254;
-  color: #5b6ace;
+  color: #2b53b5;
 }
 
 .black-jack .game-section {
@@ -61,8 +60,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1em;
-  align-content: space-around;
+  align-content: sketch;
   align-items: stretch;
+  width: 50%;
 }
 
 .black-jack .score-section {
