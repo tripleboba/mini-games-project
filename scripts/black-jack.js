@@ -1,6 +1,8 @@
 var isStarted;
 var dealerCards = [];
 var userCards = [];
+var dealerPoint = 0;
+var userPoint = 0;
 
 function startGame() {
   isStarted = true;
@@ -19,7 +21,7 @@ function shuffleDeck() {
 function drawCard() {
   addCard();
 
-  console.log(dealerCards, userCards);
+  console.log("dealer", dealerCards, "user", userCards);
   uiDisplayHelper();
 }
 
@@ -34,24 +36,46 @@ function addCard() {
 function translateDeck(cardList) {
   // translate numbers assigned for face cards to the ui logic
   // face cards: jack: 11, queen: 12, king: 13, ace: 14
+  let translated = [];
+  for (card of cardList) {
+    switch (card) {
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 6:
+      case 7:
+      case 8:
+      case 9:
+      case 10:
+        translated.push(card.toString());
+        break;
+      case 11:
+        translated.push("jack");
+        break;
+      case 12:
+        translated.push("queen");
+        break;
+      case 13:
+        translated.push("king");
+        break;
+      case 14:
+        translated.push("ace");
+        break;
+      default:
+    }
+  }
+  return translated;
 }
-
-/**
- * if ace (generated random number assigned to 14) is drawn, decide to set:
- * - A value as 1 if: the rest + 11 A gonna be busted
- * - A value as 11 if: the rest + 11 A gonna win
- * - show both total for A = 1 / A = 11 if the rest + A neither bust nor win
- */
-function hasAce() {}
 
 function getTotalCardsValue(cardList) {
   return cardList.reduce(
-    (total, currentCard) => total + setCardValue(currentCard),
+    (total, currentCard) => total + setCardValue(currentCard, total),
     0
   );
 }
 
-function setCardValue(generatedNumber) {
+function setCardValue(generatedNumber, cardListTotal) {
   // number cards: from 2 -> 10
   // face cards: jack: 11, queen: 12, king: 13, ace: 14
   if (generatedNumber <= 10) {
@@ -59,16 +83,32 @@ function setCardValue(generatedNumber) {
   } else if (generatedNumber <= 13) {
     return 10;
   } else {
-    // handle hasAce in list return 2 values
-    return 0;
+    return hasAce(cardListTotal);
   }
 }
+
+/**
+ * if ace (generated random number assigned to 14) is drawn, decide to set:
+ * - A value as 1 if: the rest + 11 A gonna be busted
+ * - A value as 11 if: the rest + 11 A gonna win
+ */
+function hasAce(cardListTotal) {
+  if (cardListTotal + 11 <= 21) {
+    return 11;
+  } else {
+    return 1;
+  }
+}
+
+function win() {}
 
 /** Helper in display necessary info to the UI */
 function uiDisplayHelper() {
   displayNumberOfCards();
   displayTotalValue("dealerTotalValue");
   displayTotalValue("userTotalValue");
+  displayDrawnCards("dealerDrawnCards");
+  displayDrawnCards("userDrawnCards");
 }
 
 function displayNumberOfCards() {
@@ -83,6 +123,12 @@ function displayNumberOfCards() {
     }
   }
   setText();
+}
+
+function displayDrawnCards(elementId) {
+  document.getElementById(elementId).textContent = elementId.includes("dealer")
+    ? translateDeck(dealerCards)
+    : translateDeck(userCards);
 }
 
 function displayTotalValue(elementId) {
