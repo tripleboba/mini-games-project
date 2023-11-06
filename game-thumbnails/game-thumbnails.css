@@ -1,0 +1,122 @@
+.game-thumbnails {
+  margin: 0;
+  background-color: #353535;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Young Serif", serif;
+}
+
+.game-thumbnails .container {
+  width: 100vw;
+  min-height: 50%;
+  min-width: 100%;
+  display: flex;
+  gap: 140px;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game-thumbnails .panel {
+  height: 25%;
+  width: 40vw;
+  position: relative;
+  margin: 20px;
+  flex-direction: column;
+}
+
+.game-thumbnails .panel:hover {
+  .card {
+    scale: 110%;
+    box-shadow: rgba(255, 255, 255, 0.48) 2px 1px 4px 0px,
+      rgba(255, 255, 255, 0.8) -2px -1px 4px 0px;
+  }
+
+  .border {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .slide {
+    bottom: 0px;
+  }
+}
+
+.game-thumbnails .ring,
+.game-thumbnails .card,
+.game-thumbnails .border,
+.game-thumbnails .slide,
+.game-thumbnails .line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-thumbnails .ring {
+  color: #fffbf1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 170px;
+}
+
+.game-thumbnails .card {
+  position: relative;
+  transition: all 1s;
+  height: 270px;
+  width: 500px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.game-thumbnails .card1 {
+  background-image: url("img/number-guesser.jpg");
+}
+
+.game-thumbnails .card2 {
+  background-image: url("img/tic-tac-toe.jpg");
+}
+
+.game-thumbnails .card3 {
+  background-image: url("img/rock-paper.jpg");
+}
+.game-thumbnails .card4 {
+  background-image: url("img/black-jack.jpg");
+}
+
+.game-thumbnails .para {
+  bottom: 0;
+  font-size: 16px;
+  font-family: "Raleway";
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.game-thumbnails .border {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  height: 260px;
+  width: 500px;
+  transition: border 1s;
+  overflow: hidden;
+}
+
+.game-thumbnails .slide {
+  height: 260px;
+  width: 500px;
+  position: absolute;
+  border: 1px solid black;
+  bottom: -270px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: bottom 1s;
+  flex-direction: column;
+}
