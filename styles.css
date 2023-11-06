@@ -17,12 +17,29 @@
 @import "contact/contact.css";
 
 /* Global styles for a whole website */
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+body main {
+  flex: 1;
 }
 
 header,
 footer {
   width: 100%;
+}
+header {
+  margin-bottom: 1em;
+}
+footer {
+  margin-top: 1em;
 }

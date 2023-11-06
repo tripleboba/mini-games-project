@@ -1,4 +1,171 @@
-.blackjack-container {
-  border: 2px solid red;
-  background-color: green;
+.black-jack {
+  background-color: #f4fbff;
+  font-family: "Tenali Ramakrishna";
+  font-size: 25px;
+}
+
+.black-jack .page-title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: "Libre Barcode 39 Text";
+  font-size: 70px;
+  margin: 0 0 1em;
+}
+
+.black-jack h3,
+.black-jack p {
+  margin-block-start: unset;
+  margin-block-end: unset;
+}
+
+.black-jack .container {
+  padding: 10px;
+  border-radius: 1em;
+}
+
+.black-jack .description {
+  margin-bottom: 1em;
+}
+
+.black-jack .game-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.black-jack .game {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding: 1em;
+
+  background-color: #d5d9f254;
+  color: #2b53b5;
+}
+
+.black-jack .game-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.black-jack .dealer {
+  color: #000;
+}
+
+.black-jack .info-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-content: sketch;
+  align-items: stretch;
+  width: 50%;
+}
+
+.black-jack .score-section {
+  background-color: #fff;
+}
+
+.black-jack .action-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.black-jack .result {
+  background-color: #fce2704a;
+  color: #8d7200;
+}
+
+/* buttons */
+.black-jack .button {
+  padding: 0.5em 0.5em 0.2em;
+  border-radius: 0.5em;
+  border-style: solid;
+  background-color: #fff;
+  border: 1.5px solid;
+  cursor: pointer;
+  white-space: wrap;
+  font-family: "Tenali Ramakrishna";
+  font-size: 1em;
+}
+.black-jack .button:disabled {
+  opacity: 0.5;
+  cursor: unset;
+}
+
+.black-jack #backButton {
+  margin: 0 0 20px 10px;
+  font-size: 16px;
+}
+.black-jack #backButton:hover {
+  transform: scale(1.2);
+  box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.4);
+}
+.black-jack #backButton a {
+  text-decoration: none;
+  color: #000;
+}
+
+.black-jack #startButton {
+  border-color: #fd6a88;
+  color: #fd6a88;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+.black-jack #startButton:hover:enabled {
+  border-color: #ffdc7d;
+  background-color: #fce270;
+  color: #7e6318;
+}
+
+.black-jack #drawCardButton {
+  min-width: 163px;
+  border-color: #5ea526;
+  color: #5ea526;
+  background-color: #e6f7ef;
+}
+.black-jack #drawCardButton:hover:enabled {
+  color: #fff;
+  background-color: #5ea526;
+}
+
+.black-jack #endButton {
+  background-color: #fde0e6;
+  color: #cc0f35;
+  border-color: #cc0f358c;
+}
+.black-jack #endButton:hover:enabled {
+  background-color: #f14668;
+  color: #fff;
+}
+
+.black-jack #replayButton {
+  background-color: #fff3d1;
+  color: #7e6318;
+  border-color: #fce270;
+}
+.black-jack #replayButton:hover:enabled {
+  border-color: #ffdc7d;
+  background-color: #fce270;
+  color: #7e6318;
+}
+
+.black-jack .icon {
+  width: 1.5em;
+}
+
+.black-jack .hidden {
+  display: none !important;
 }

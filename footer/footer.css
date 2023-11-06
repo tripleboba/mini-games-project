@@ -18,7 +18,9 @@
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 50%;
   padding: 0;
   margin: 0;
+  gap: 20px;
 }
