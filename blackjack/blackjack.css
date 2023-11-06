@@ -55,6 +55,10 @@
   gap: 10px;
 }
 
+.black-jack .dealer {
+  color: #000;
+}
+
 .black-jack .info-section {
   display: flex;
   flex-direction: column;

@@ -73,13 +73,11 @@
               <div class="info-section">
                 <div class="score-section container">
                   <h3>Score Board</h3>
-                  <p>Player:</p>
-                  <p>Dealer:</p>
+                  <p>Dealer: <span id="dealerPoint"></span></p>
+                  <p>You: <span id="userPoint"></span></p>
                 </div>
                 <div class="action-section">
-                  <button id="endButton" class="button">
-                    End Early! Show total!
-                  </button>
+                  <button id="endButton" class="button">End Early!</button>
                   <button id="replayButton" class="button" disabled>
                     Compete Again!
                   </button>
@@ -88,7 +86,7 @@
             </div>
             <div id="result" class="container result hidden">
               <h3>Result</h3>
-              <p>Win, Tie, Bust</p>
+              <p id="gameResult"></p>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ var dealerCards = [];
 var userCards = [];
 var dealerPoint = 0;
 var userPoint = 0;
+var resultMsg = "";
 
 function startGame() {
   isStarted = true;
@@ -20,8 +21,7 @@ function shuffleDeck() {
 
 function drawCard() {
   addCard();
-
-  console.log("dealer", dealerCards, "user", userCards);
+  getGameResult();
   uiDisplayHelper();
 }
 
@@ -93,14 +93,34 @@ function setCardValue(generatedNumber, cardListTotal) {
  * - A value as 11 if: the rest + 11 A gonna win
  */
 function hasAce(cardListTotal) {
-  if (cardListTotal + 11 <= 21) {
-    return 11;
-  } else {
-    return 1;
-  }
+  return cardListTotal + 11 <= 21 ? 11 : 1;
 }
 
-function win() {}
+function getGameResult() {
+  let dealerTotal = getTotalCardsValue(dealerCards);
+  let userTotal = getTotalCardsValue(userCards);
+
+  if (
+    (dealerTotal === 21 && userTotal !== 21) ||
+    (userTotal > 21 && dealerTotal <= 21)
+  ) {
+    dealerPoint++;
+    resultMsg = "You bust! Dealer wins this round!";
+    endGame();
+  } else if (
+    (dealerTotal === 21 && userTotal === 21) ||
+    (dealerTotal > 21 && userTotal > 21)
+  ) {
+    userPoint++;
+    dealerPoint++;
+    resultMsg = "Tie!";
+    endGame();
+  } else if (!(dealerTotal < 21 && userTotal < 21)) {
+    userPoint++;
+    resultMsg = "Dealer busts! You win this round!";
+    endGame();
+  }
+}
 
 /** Helper in display necessary info to the UI */
 function uiDisplayHelper() {
@@ -109,6 +129,9 @@ function uiDisplayHelper() {
   displayTotalValue("userTotalValue");
   displayDrawnCards("dealerDrawnCards");
   displayDrawnCards("userDrawnCards");
+  displayPoint("dealerPoint");
+  displayPoint("userPoint");
+  // displayGameResult();
 }
 
 function displayNumberOfCards() {
@@ -137,8 +160,19 @@ function displayTotalValue(elementId) {
     : getTotalCardsValue(userCards);
 }
 
+function displayPoint(elementId) {
+  document.getElementById(elementId).textContent = elementId.includes("dealer")
+    ? dealerPoint
+    : userPoint;
+}
+
+function displayGameResult() {
+  document.getElementById("gameResult").textContent = resultMsg;
+}
+
 function endGame() {
   showElement("result", "result-section");
+  displayGameResult();
   disableButton("drawCardButton");
   disableButton("endButton");
   enableButton("replayButton");
