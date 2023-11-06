@@ -1,17 +1,16 @@
-body {
+.black-jack {
   background-color: #f4fbff;
 }
 
-.blackjack-container {
-  .page-title {
-    display: flex;
-    text-align: center;
-    align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+.blackjack .page-title {
+  display: flex;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
+
 .game-wrapper {
   display: flex;
   flex-direction: column;

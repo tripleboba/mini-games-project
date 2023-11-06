@@ -7,78 +7,84 @@
     <link rel="stylesheet" href="../styles.css" />
   </head>
 
-  <body>
-    <div id="navbar"></div>
+  <body class="black-jack">
+    <header>
+      <div id="topNavbar"></div>
+    </header>
 
-    <!-- 
+    <main>
+      <!-- 
       score board
       back button
      -->
-    <div class="blackjack-container">
-      <div class="page-header">
-        <h1 class="page-title">
-          Simple Black Jack
-          <img src="icons/blackjack.jpg" alt="blackjack-icon" class="icon" />
-        </h1>
-        <div class="description">
-          <h3>How To Play This Game</h3>
-          <p>
-            This is simple Black Jack game. Get total value of all cards close
-            to 21 as possible without exceeding it. Number cards are worth their
-            face value, face cards (kings, queens, and jacks) are each worth 10
-            points, and aces can be 1 or 11 points. If your hand is closer to 21
-            than the dealer's without going over, you win! If your hand exceeds
-            21, you lose.
-          </p>
-        </div>
-      </div>
-
-      <button id="startButton" class="button">
-        Start Game
-        <img src="icons/playing-card.jpg" alt="playing-card" class="icon" />
-      </button>
-
-      <div id="gameStartedContainer" class="hidden">
-        <div class="game-wrapper">
-          <div class="container game">
-            <div class="game-section">
-              <div class="dealer">
-                <p>Dealer's Hand: <span class="totalCards"></span></p>
-                <p>Total Value: <span id="dealerTotalValue"></span></p>
-              </div>
-              <div class="user">
-                <p>Your Hand: <span class="totalCards"></span></p>
-                <p>Total Value: <span id="userTotalValue"></span></p>
-              </div>
-              <button id="drawCardButton" class="button">Draw A Card</button>
-            </div>
-            <div class="info-section">
-              <div class="score-section">
-                <h4>Score Board</h4>
-              </div>
-              <div class="action-section">
-                <button id="endButton" class="button">
-                  End Early! Show total!
-                </button>
-                <button id="replayButton" class="button" disabled>
-                  Compete Again!
-                </button>
-              </div>
-            </div>
-          </div>
-          <div id="result" class="container result hidden">
-            <h4>Result</h4>
-            <p>Win, Tie, Bust</p>
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">
+            Simple Black Jack
+            <img src="icons/blackjack.jpg" alt="blackjack-icon" class="icon" />
+          </h1>
+          <div class="description">
+            <h3>How To Play This Game</h3>
+            <p>
+              This is simple Black Jack game. Get total value of all cards close
+              to 21 as possible without exceeding it. Number cards are worth
+              their face value, face cards (kings, queens, and jacks) are each
+              worth 10 points, and aces can be 1 or 11 points. If your hand is
+              closer to 21 than the dealer's without going over, you win! If
+              your hand exceeds 21, you lose.
+            </p>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div id="footer"></div>
+        <button id="startButton" class="button">
+          Start Game
+          <img src="icons/playing-card.jpg" alt="playing-card" class="icon" />
+        </button>
+
+        <div id="gameStartedContainer" class="hidden">
+          <div class="game-wrapper">
+            <div class="container game">
+              <div class="game-section">
+                <div class="dealer">
+                  <p>Dealer's Hand: <span class="totalCards"></span></p>
+                  <p>Total Value: <span id="dealerTotalValue"></span></p>
+                </div>
+                <div class="user">
+                  <p>Your Hand: <span class="totalCards"></span></p>
+                  <p>Total Value: <span id="userTotalValue"></span></p>
+                </div>
+                <button id="drawCardButton" class="button">Draw A Card</button>
+              </div>
+              <div class="info-section">
+                <div class="score-section">
+                  <h4>Score Board</h4>
+                </div>
+                <div class="action-section">
+                  <button id="endButton" class="button">
+                    End Early! Show total!
+                  </button>
+                  <button id="replayButton" class="button" disabled>
+                    Compete Again!
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="result" class="container result hidden">
+              <h4>Result</h4>
+              <p>Win, Tie, Bust</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer"></div>
+    </footer>
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src=".../scripts/shared-elements.js" defer></script>
+    <script type="module" src="../scripts/shared-elements.js" defer></script>
+
     <script src="../scripts/black-jack.js" defer></script>
   </body>
 </html>
