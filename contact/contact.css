@@ -1,0 +1,75 @@
+.contact {
+  font-family: comic;
+  background-color: #f5f3e7;
+}
+
+.contact main {
+  margin: 120px;
+  color: #36123f;
+}
+
+.contact #about-section {
+  border: 1px solid #beb1d1;
+  padding: 20px;
+  margin: 20px 0 20px;
+  background-color: white;
+  border-radius: 20px;
+  background-color: #f5f3e7;
+}
+
+.contact #about-section h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.contact #about-section p {
+  font-size: 23px;
+}
+
+.contact #contact-form {
+  border: 1px solid #c9ade5;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.contact form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.contact form select {
+  cursor: pointer;
+}
+
+.contact form select,
+.contact form input,
+.contact form textarea {
+  width: 85%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #beb1d1;
+  border-radius: 20px;
+}
+
+.contact form select {
+  width: 50%;
+}
+
+.contact form input[type="submit"] {
+  background-color: #f5bfd2;
+  color: #360737;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.contact form input[type="submit"]:hover {
+  background-color: #bd95c3;
+}
+
+.contact #thank-you {
+  border: 1px solid #beb1d1;
+  padding: 20px;
+  background-color: #f5e2e4;
+  border-radius: 20px;
+}

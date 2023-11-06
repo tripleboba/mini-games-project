@@ -1,0 +1,88 @@
+.number-guesser {
+  font-family: comic;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f3e7;
+  width: 100%;
+}
+
+.number-guesser .description,
+.number-guesser .score-display {
+  margin: 90px;
+  padding: 20px;
+  border: 1px solid #c9ade5;
+  border-radius: 20px;
+}
+
+.number-guesser .description {
+  color: rgb(64, 12, 87);
+}
+
+.number-guesser .score-display {
+  color: rgb(56, 12, 87);
+  border: 2px solid #c9ade5;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.number-guesser .container {
+  display: inline-flex;
+}
+
+.number-guesser .left-div {
+  flex: 2;
+  color: #41316b;
+  font-size: large;
+  margin: 0 auto 0 120px;
+  padding: 20px;
+  border: 1px solid #c9ade5;
+  border-radius: 20px;
+  width: 500px;
+}
+
+.number-guesser .right-div {
+  flex: 1;
+  margin: 0 auto 0 120px;
+  padding: 20px;
+}
+
+.number-guesser input,
+.number-guesser select,
+.number-guesser textarea {
+  color: rgb(64, 15, 86);
+}
+
+.number-guesser #submit {
+  background: #41316b;
+  color: rgb(204, 171, 189);
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+  cursor: pointer;
+  height: 50px;
+}
+
+.number-guesser #guess {
+  width: 50px;
+  height: 50px;
+}
+
+.number-guesser img.animated-gif {
+  width: 200px;
+  height: auto;
+  padding: 100px;
+}
+
+.number-guesser .back-arrow {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+  color: #420a44;
+}
+
+.number-guesser .back-arrow:hover {
+  text-decoration: underline;
+}
