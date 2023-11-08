@@ -45,16 +45,17 @@
 }
 
 .has-submenu .submenu {
-  display: none;
-  position: absolute;
-  width: 40px;
-  left: 0;
-  top: 100%;
-  background: none;
-  color: #262433;
-  margin: 5px;
+    display: none;
+    position: absolute;
+    width: 150px;
+    left: 0;
+    top: 100%;
+    background: none;
+    color: #262433;
+    margin: 5px;
+    background: #0d0541;
+    
 }
-
 .top-navbar .submenu .link {
   margin-bottom: 10px;
 }
