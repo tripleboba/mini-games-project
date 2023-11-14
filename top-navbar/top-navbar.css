@@ -48,12 +48,12 @@
 .has-submenu .submenu {
     display: none;
     position: absolute;
-    width: 150px;
+    width: 200px;
     left: -40px;
     top: 100%;
     background: none;
     color: #262433;
-    margin: 0px;
+    margin: 1px;
     background: #0d0541;
     list-style: none;
 
@@ -66,6 +66,7 @@
 .top-navbar .has-submenu .submenu a {
     white-space: nowrap;
 }
+
 .top-navbar .has-submenu:hover .submenu {
     display: block;
 }
