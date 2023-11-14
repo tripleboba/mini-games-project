@@ -117,3 +117,7 @@
   transition: bottom 1s;
   flex-direction: column;
 }
+.para a{
+  text-decoration:none;
+  color:white;
+}
