@@ -6,6 +6,6 @@ group project to create simple website with 4 mini games
 
 <img src="docs/wireframes/homepage.png" alt="homepage-wireframe">
 
-# number-guesser game gif
+#### Tasks
 
-<img class="animated-gif" src="giphy.gif" />
+Members and their tasks: [Issues](https://github.com/tripleboba/mini-games-project/issues?q=is%3Aissue+is%3Aall)

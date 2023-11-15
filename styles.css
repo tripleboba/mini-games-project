@@ -1,9 +1,49 @@
 /* Import other component stylesheet */
-@import "navbar.css";
-@import "footer.css";
+
+/* shared */
+@import "top-navbar/top-navbar.css";
+@import "footer/footer.css";
+
+/* home */
+@import "game-thumbnails/game-thumbnails.css";
+
+/* games */
+@import "number-guesser/number-guesser.css";
+@import "tic-tac-toe/tictactoe.css";
+@import "rock-paper-scissors/rock-paper-scissors.css";
 @import "blackjack/blackjack.css";
 
+/* contact */
+@import "contact/contact.css";
+
 /* Global styles for a whole website */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body main {
+  flex: 1;
+}
+
+.app-root main {
+  height: 100vh;
+}
+
+header,
+footer {
+  width: 100%;
+}
+header {
+  margin-bottom: 1em;
+}
+footer {
+  margin-top: 1em;
 }
