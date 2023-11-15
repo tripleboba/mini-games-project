@@ -1,5 +1,8 @@
 .black-jack {
   background-color: #f4fbff;
+}
+
+.black-jack .container {
   font-family: "Tenali Ramakrishna";
   font-size: 25px;
 }
